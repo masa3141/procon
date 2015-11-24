@@ -2,7 +2,7 @@
 //  ALDS1_2_C.cpp
 //  
 //
-//  Created by 風間　正弘 on 2015/11/24.
+//  Created by mk on 2015/11/24.
 //
 //
 
