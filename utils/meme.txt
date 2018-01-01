@@ -1,3 +1,13 @@
 ABC084　D問題
 特定の範囲（left -> right）内で、条件に該当する数を答える問題においては、その数の累積関数F(x)を定義し、F(left)-F(right)を答えとして出力する
 
+ARC086 C問題
+配列内に重複がある際に、その要素が何個あるかを数えるときは、
+from collections import Counter
+a = Counter(map(int, input().split()))
+を使う
+
+ARC085 C問題
+累乗はpowではなく、aのb乗はa**bを使う
+sum(1 -> ∞) (1-a)^(n-1) = 1/a
+sum(1 -> ∞) n(1-a)^(n-1) = 1/a^2
