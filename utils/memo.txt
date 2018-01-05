@@ -18,3 +18,14 @@ ARC080 C問題
 
 ARC079 D問題
 K // 50とmath.floor(K/50)の結果が違う?
+
+ARC077 D問題
+階乗を返す
+math.factorial(x)
+組み合わせを返す
+https://qiita.com/lethe2211/items/6f78ae202e96e52a8cb9
+pythonで競技プログラミング
+http://nemupm.hatenablog.com/entry/2015/01/03/234840
+
+dpに関して
+http://n-knuu.hatenablog.jp/entry/2015/10/07/170643
