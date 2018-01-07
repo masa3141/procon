@@ -61,7 +61,7 @@ print(c.most_common()) # [('be', 2), ('to', 2), ('that', 1), ('is', 1), ('questi
 # カウンタの値が最大のものから順に3つを出力
 print(c.most_common(3)) # [('be', 2), ('to', 2), ('that', 1)]
 
-
+# 上手く動いていない？
 def nCr(n, r):
     # 10C7 = 10C3
     r = min(r, n-r)
@@ -77,3 +77,27 @@ def nCr(n, r):
     # for i in range(r, 1, -1):
     #     denominator *= i
     # return numerator // denominator
+
+# Combinationの計算
+
+# http://nemupm.hatenablog.com/entry/2015/01/03/234840
+def modc(a,b,m):
+    c = 1
+    for i in range(b):
+        c = c * (a - i) % m
+        c = c * modinv(i + 1,m) % m
+    return c
+
+def egcd(a, b):
+    (x, lastx) = (0, 1)
+    (y, lasty) = (1, 0)
+    while b != 0:
+        q = a // b
+        (a, b) = (b, a % b)
+        (x, lastx) = (lastx - q * x, x)
+        (y, lasty) = (lasty - q * y, y)
+    return (lastx, lasty, a)
+
+def modinv(a, m):
+    (inv, q, gcd_val) = egcd(a, m)
+    return inv % m
