@@ -146,7 +146,7 @@ print(q) # deque([1, 2, 3])
 # http://lethe2211.hatenablog.com/entry/2014/12/30/011030
 
 import heapq
-q = [] # プライオリティキュー
+q = [] # プライオリティキュー minヒープ
 heapq.heappush(q, 1) # 1をpush
 #q
 #[1]
@@ -160,3 +160,21 @@ heapq.heappush(q, 0) # 0をpush
 #0
 #q
 #[1, 2]
+
+# 二分探索
+import bisect
+a=[1,3,5,7,9,11,13,15,17,19]
+x=4
+
+insert_index = bisect.bisect_left(a,x)
+
+"""
+insert_index=2
+"""
+
+a.insert(insert_index,x)
+
+print(a)
+"""
+Out[1]:[1,3,4,5,7,9,11,13,15,17,19]
+"""

@@ -29,3 +29,12 @@ http://nemupm.hatenablog.com/entry/2015/01/03/234840
 
 dpに関して
 http://n-knuu.hatenablog.jp/entry/2015/10/07/170643
+
+時計回りor反時計回りの判定
+外積x×y=(ad-bc)が正なら反時計回り、負なら時計回り
+
+線分p1p2と線分p3p4の交差判定
+ccw(p1,p2,p3) * ccw(p1,p2,p4) <= 0
+and
+ccw(p3,p4,p1) * ccw(p3,p4,p2) <= 0
+
