@@ -183,3 +183,16 @@ Out[1]:[1,3,4,5,7,9,11,13,15,17,19]
 import math
 
 print(math.gcd(10, 15))
+
+
+#深さ優先探索
+def dfs(Graph, Start, Visited=None):
+    if (Visited==None):  Visited = [] #開始点のときに探索済みリストをつくる
+    Visited.append(Start)  #現在の頂点を探索済みリストに加える
+    print(Start, "\n", Visited)  #現在の頂点と探索済みリストを表示
+    for Next in Graph[Start]:  #次に探索する頂点の候補
+        if ( Next in Visited ):  continue  #訪問済みリストにある頂点は飛ばす
+        dfs(Graph, Next, Visited)  #再帰
+
+#頂点０（１）から探索
+dfs(l, 0)
