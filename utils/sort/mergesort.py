@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 def merge(A, l, mid, r):
-    Ls = A[l:mid]
-    Rs = A[mid:r]
+    Ls = A[l:mid].copy()
+    Rs = A[mid:r].copy()
     Ls.append(float('inf')) #番兵
     Rs.append(float('inf')) #番兵
     i = 0
@@ -23,7 +23,7 @@ def mergeSort(A, l, r):
         mergeSort(A, mid, r)
         merge(A, l, mid, r)
 
-B = [4,7,3,6,5]
+B = [3,6,2,4]
 
-print(mergeSort(B,0,5))
+print(mergeSort(B,0,4))
 print(B)
