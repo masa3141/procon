@@ -29,6 +29,7 @@ http://nemupm.hatenablog.com/entry/2015/01/03/234840
 
 dpに関して
 http://n-knuu.hatenablog.jp/entry/2015/10/07/170643
+https://qiita.com/drken/items/a5e6fe22863b7992efdb
 
 時計回りor反時計回りの判定
 外積x×y=(ad-bc)が正なら反時計回り、負なら時計回り
