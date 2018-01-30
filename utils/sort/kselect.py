@@ -15,16 +15,15 @@ def pertition(A, l, r):
     A[r] = tmp
     return i
 
-def kselect(A, k):
-    r = len(A)-1
-    ind = pertition(A, 0, r)
-    while ind != k-1:
-        if ind < k-1:
-            ind = pertition(A, ind, r)
-        else:
-            ind = pertition(A, 0, ind)
-    return A[ind]
+def kselect(A,l,r, k):
+    mid = pertition(A,l,r)
+    if mid == k:
+        return A[mid]
+    elif mid > k:
+        return kselect(A,l,mid-1,k)
+    else:
+        return kselect(A,mid+1,r,k)
 
 B = [6,3,2,5,4]
-print(kselect(B,2))
+print(kselect(B,0,len(B)-1,4))
 print(B)
